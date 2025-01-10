@@ -6,10 +6,10 @@ const connectDB = require("./config/db");
 const apiRoutes = require("./src/routes/apiRoutes");
 connectDB();
 // Schedule the task to run every minute
-// cron.schedule("* * * * *", () => {
-//   console.log("Fetching cryptocurrency data...");
-//   executeTask();
-// });
+cron.schedule("* * * * *", () => {
+  console.log("Fetching cryptocurrency data...");
+  executeTask();
+});
 
 console.log(
   "Crypto Fetcher Service is running. Data will be fetched every minute."
