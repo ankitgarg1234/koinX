@@ -1,24 +1,46 @@
---> clone the repo 
-    https://github.com/ankitgarg1234/koinX.git
+# KoinX Repository
 
---> install all the packages 
-    npm i
- 
---> make a .env file to keep all the environemnt variable
-    COINGECKO_API_KEY  
-    MONGO_URI
+## Clone the Repository
+```bash
+https://github.com/ankitgarg1234/koinX.git
+```
 
---> How to get COINGECKO_API_KEY 
-    https://docs.coingecko.com/v3.0.1/reference/introduction login to this link and create a free account and get the API key
+## Install Packages
+```bash
+npm i
+```
 
---> How to get MONGO_URI 
-    go to mongodb atlas, create the cluster and get it from there
+## Set Up Environment Variables
+Create a `.env` file and include the following keys:
+```env
+COINGECKO_API_KEY=<your_api_key>
+MONGO_URI=<your_mongo_uri>
+```
 
---> run the server
-    node index.js
+### How to Get `COINGECKO_API_KEY`
+- Visit [CoinGecko API Documentation](https://docs.coingecko.com/v3.0.1/reference/introduction).
+- Create a free account.
+- Generate and copy your API key.
 
---> testing the /stats api (chnage the coin query acc to the need e.g. bitcoin, matic-network, ethereum)
-    http://127.0.0.1:3000/api/stats?coin=matic-network
+### How to Get `MONGO_URI`
+- Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+- Create a cluster.
+- Obtain your connection string (Mongo URI).
 
---> testing the /deviation api (chnage the coin query acc to the need e.g. bitcoin,  matic-network, ethereum)
-    http://127.0.0.1:3000/api/deviation?coin=matic-network
+## Run the Server
+```bash
+node index.js
+```
+
+## Testing APIs
+
+### `/stats` API
+Test using the following endpoint (modify the `coin` query parameter as needed, e.g., `bitcoin`, `matic-network`, `ethereum`):
+```bash
+http://127.0.0.1:3000/api/stats?coin=matic-network
+```
+
+### `/deviation` API
+Test using the following endpoint (modify the `coin` query parameter as needed, e.g., `bitcoin`, `matic-network`, `ethereum`):
+```bash
+http://127.0.0.1:3000/api/deviation?coin=matic-network
